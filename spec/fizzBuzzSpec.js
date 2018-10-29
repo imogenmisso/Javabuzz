@@ -18,4 +18,11 @@ describe("FizzBuzz", function() {
       expect(fizzBuzz.isDivisibleByFifteen(15)).toBe(true);
     })
   })
+
+  describe('it says', function() {
+
+    it('Fizz when number divisible by 3', function() {
+      expect(fizzBuzz.says(3)).toEqual('Fizz')
+    })
+  })
 });
