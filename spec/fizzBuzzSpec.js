@@ -5,24 +5,22 @@ describe("FizzBuzz", function() {
     fizzBuzz = new FizzBuzz();
   })
 
-  describe('knows when a number is', function() {
-
-    it('divisible by 3', function() {
-      expect(fizzBuzz.isDivisibleByThree(3)).toBe(true);
-    })
-    it('divisible by 5', function() {
-      expect(fizzBuzz.isDivisibleByFive(5)).toBe(true);
-    })
-
-    it('divisble by 15', function() {
-      expect(fizzBuzz.isDivisibleByFifteen(15)).toBe(true);
-    })
-  })
-
   describe('it says', function() {
 
     it('Fizz when number divisible by 3', function() {
       expect(fizzBuzz.says(3)).toEqual('Fizz')
+    })
+
+    it('Buzz when number divisible by 5', function() {
+      expect(fizzBuzz.says(5)).toEqual('Buzz')
+    })
+
+    it('FizzBuzz when number divisible by 15', function() {
+      expect(fizzBuzz.says(15)).toEqual('FizzBuzz')
+    })
+
+    it('the number otherwise', function() {
+      expect(fizzBuzz.says(67)).toEqual(67)
     })
   })
 });
